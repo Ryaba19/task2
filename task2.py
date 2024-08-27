@@ -2,16 +2,16 @@ import sys
 import math
 
 def determine_position(circle_file, points_file):
-    # Read the circle's center and radius from the first file
+    
     with open(circle_file, 'r') as f:
         x_center, y_center = map(float, f.readline().split())
         radius = float(f.readline().strip())
     
-    # Read the points from the second file and determine their position
+    
     with open(points_file, 'r') as f:
         points = [tuple(map(float, line.split())) for line in f.readlines()]
     
-    # Calculate and output the position for each point
+   
     for x, y in points:
         distance = math.sqrt((x - x_center)**2 + (y - y_center)**2)
         
